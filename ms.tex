@@ -1,0 +1,224 @@
+\documentclass{article}
+
+
+
+\usepackage{arxiv}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{lipsum}		% Can be removed after putting your text content
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{doi}
+
+
+
+\title{A framework for long tail AI applications}
+
+%\date{September 9, 1985}	% Here you can change the date presented in the paper title
+%\date{} 					% Or removing it
+
+\author{
+
+Piero Savastano \thanks{Use footnote for providing further information about author (webpage, alternative address).} \\
+Independent Researcher\\
+Rome, Italy\\
+\texttt{piero.savastano@gmail.com}\\
+	
+\And
+	
+Nicola Corbellini \\
+Department of ...\\
+University ...\\
+City, Country \\
+\texttt{nicola.corbellini@edu.unige.it} \\
+
+\And
+
+Coauthor \\
+Affiliation \\
+Address \\
+\texttt{email@emil.email} \\
+
+\And
+
+Coauthor \\
+Affiliation \\
+Address \\
+\texttt{email@emil.email} \\
+
+\And
+
+Coauthor \\
+Affiliation \\
+Address \\
+\texttt{email@emil.email} \\
+	
+}
+
+
+%\date{23/03/2033}
+
+% Uncomment to override  the `A preprint' in the header
+%\renewcommand{\headeright}{Technical Report}
+%\renewcommand{\undertitle}{Technical Report}
+\renewcommand{\shorttitle}{\textit{arXiv} Template}
+
+%%% Add PDF metadata to help others organize their library
+%%% Once the PDF is generated, you can check the metadata with
+%%% $ pdfinfo template.pdf
+%%\hypersetup{
+%%pdftitle={A template for the arxiv style},
+%%pdfsubject={q-bio.NC, q-bio.QM},
+%%pdfauthor={David S.~Hippocampus, Elias D.~Striatum},
+%%pdfkeywords={First keyword, Second keyword, More},
+%%}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Recent developments in Large Language Models opened up a vast ecosystem of applications. We introduce an architecture aimed at the construction of long tail AI assistants. In the same way Content Management Systems allowed rapid diffusion and personalization of web applications, we propose an architecture and framework to do the same with AI assistants based on a language model. The architecture presents itself as a web service, featuring a vector long term memory, a file uploader and a plugin system for extendibility.
+A Python implementation already exists here []
+\end{abstract}
+
+
+% keywords can be removed
+\keywords{Artificial Intelligence \and Cognitive Architecture \and Open Source \and Large Language Models}
+
+
+\section{Introduction}
+Extedn the abstract on why we are doing this and how.
+
+
+\section{State of the Art}
+Describe current scientific ecosystem, giving reference to proprietary solutions (advanced, not scientifically shared) and open source tools.
+
+\subsection{Large Language Models}
+Cloud private offering vs open ecosystem, distilled models, generators vs instruction based, RLHF
+
+\subsubsection{Agents}
+ReAct, ToolFormer, AutoGPT and others
+
+\subsubsection{Open source tooling}
+Langchain, vector dbs
+
+\section{The Cheshire Cat architecture}
+
+Here we explain how the cat works
+
+\subsection{Main loop}
+Main conversational flow
+
+\subsection{Large Language Model}
+- LLM agnosticism\\
+- LLM as a part, not as the whole AI (pure AGI via deep learning may arrive but in this way we accomplish control and feasability on the short term)\\
+- Neurosymbolic approach (mixture of neural and symbolic computation)\\
+- Main prompt
+
+\subsection{Vector Memory}
+- Embedding + approximate nearest neighbour\\
+- HyDE
+
+\subsection{Plugin system}
+Here we explain how plugins work and how they are a combination between WordPress style plugins and the Toolformer
+
+\subsubsection{Hooks}
+How hooks work
+
+\subsubsection{Tools}
+How Tools work
+
+\subsection{Endpoints}
+Network capabilities
+
+\subsection{Citations}
+Citations use \verb+natbib+. The documentation may be found at
+\begin{center}
+	\url{http://mirrors.ctan.org/macros/latex/contrib/natbib/natnotes.pdf}
+\end{center}
+
+Here is an example usage of the two main commands (\verb+citet+ and \verb+citep+): Some people thought a thing \citep{kour2014real, hadash2018estimate} but other people thought something else \citep{kour2014fast}. Many people have speculated that if we knew exactly why \citet{kour2014fast} thought this\dots
+
+\subsection{Figures}
+\lipsum[10]
+See Figure \ref{fig:fig1}. Here is how you add footnotes. \footnote{Sample of the first footnote.}
+\lipsum[11]
+
+\begin{figure}
+	\centering
+	\fbox{\rule[-.5cm]{4cm}{4cm} \rule[-.5cm]{4cm}{0cm}}
+	\caption{Sample figure caption.}
+	\label{fig:fig1}
+\end{figure}
+
+\subsection{Tables}
+See awesome Table~\ref{tab:table}.
+
+The documentation for \verb+booktabs+ (`Publication quality tables in LaTeX') is available from:
+\begin{center}
+	\url{https://www.ctan.org/pkg/booktabs}
+\end{center}
+
+
+\begin{table}
+	\caption{Sample table title}
+	\centering
+	\begin{tabular}{lll}
+		\toprule
+		\multicolumn{2}{c}{Part}                   \\
+		\cmidrule(r){1-2}
+		Name     & Description     & Size ($\mu$m) \\
+		\midrule
+		Dendrite & Input terminal  & $\sim$100     \\
+		Axon     & Output terminal & $\sim$10      \\
+		Soma     & Cell body       & up to $10^6$  \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:table}
+\end{table}
+
+\subsection{Lists}
+\begin{itemize}
+	\item Lorem ipsum dolor sit amet
+	\item consectetur adipiscing elit.
+	\item Aliquam dignissim blandit est, in dictum tortor gravida eget. In ac rutrum magna.
+\end{itemize}
+
+
+\bibliographystyle{unsrtnat}
+\bibliography{references}  %%% Uncomment this line and comment out the ``thebibliography'' section below to use the external .bib file (using bibtex) .
+
+
+%%% Uncomment this section and comment out the \bibliography{references} line above to use inline references.
+% \begin{thebibliography}{1}
+
+% 	\bibitem{kour2014real}
+% 	George Kour and Raid Saabne.
+% 	\newblock Real-time segmentation of on-line handwritten arabic script.
+% 	\newblock In {\em Frontiers in Handwriting Recognition (ICFHR), 2014 14th
+% 			International Conference on}, pages 417--422. IEEE, 2014.
+
+% 	\bibitem{kour2014fast}
+% 	George Kour and Raid Saabne.
+% 	\newblock Fast classification of handwritten on-line arabic characters.
+% 	\newblock In {\em Soft Computing and Pattern Recognition (SoCPaR), 2014 6th
+% 			International Conference of}, pages 312--318. IEEE, 2014.
+
+% 	\bibitem{hadash2018estimate}
+% 	Guy Hadash, Einat Kermany, Boaz Carmeli, Ofer Lavi, George Kour, and Alon
+% 	Jacovi.
+% 	\newblock Estimate and replace: A novel approach to integrating deep neural
+% 	networks with existing applications.
+% 	\newblock {\em arXiv preprint arXiv:1804.09028}, 2018.
+
+% \end{thebibliography}
+
+
+\end{document}
